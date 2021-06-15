@@ -1,5 +1,5 @@
 let greed = 'helloo?.';
-// `xify`============================
+// `xify`==================================================================================================================
 
 function replace(str){
     let xxx = '';
@@ -11,7 +11,7 @@ function replace(str){
 console.log(replace(greed));
 console.log();
 
-//  `yellingChars`=======================
+//  `yellingChars`=========================================================================================================
 
 function replace2(str){
     let xxx = '';
@@ -23,7 +23,7 @@ function replace2(str){
 console.log(replace2(greed));
 console.log();
 
-//`indexedChars`=======================
+//`indexedChars`=============================================================================================================
 
 function replace3(str){
     let xxx = '';
@@ -36,7 +36,7 @@ function replace3(str){
 console.log(replace3(greed));
 console.log();
 
-//numberedChars ========================
+//numberedChars =============================================================================================================
 
 function replace4(str){
     let xxx = '';
@@ -49,7 +49,7 @@ function replace4(str){
 console.log(replace4(greed));
 console.log();
 
-//exclaim ====================================
+//exclaim =================================================================================================================
 function replace5(str){
     let xxx = '';
     for(const char of str){ 
@@ -65,7 +65,7 @@ function replace5(str){
 console.log(replace5(greed));
 console.log();
 
-//`repeatIt` ===================
+//`repeatIt` =============================================================================================================
 function repeat(s, n){
     let a = [];
     while(a.length < n){
@@ -76,7 +76,7 @@ function repeat(s, n){
 console.log(repeat('Hello!!',3));
 console.log();
 
-//`truncate` ===============
+//`truncate` =============================================================================================================
 
 function short(str){
     let xxx = '';
@@ -93,7 +93,7 @@ function short(str){
 console.log(short(greed));
 console.log();
 
-//`ciEmailify`================
+//`ciEmailify`===========================================================================================================
 function ciEmailify(str){
     let xxx = '';
     for(const char of str){ 
@@ -109,7 +109,7 @@ function ciEmailify(str){
 }
 console.log(ciEmailify('Diego Sousa'));
 console.log();
-//`reverse`================
+//`reverse`==============================================================================================================
 function reverse(str){
     let xxx = '';
     for(let i = str.length - 1; i >= 0; i--){ 
@@ -119,7 +119,7 @@ function reverse(str){
 }
 console.log(reverse(greed));
 console.log();
-//`onlyVowels` =================
+//`onlyVowels` ==========================================================================================================
 function onlyVowels(str){
     let xxx = '';
     let vowels = 'aeiou';
@@ -132,24 +132,62 @@ function onlyVowels(str){
 }
 console.log(onlyVowels(greed));
 console.log();
-//`crazyCase` =================
-// function ciEmailify(str){
-//     let xxx = '';
-//     str = str.toLowerCase();
-//     for(const char of str){ 
-//         if( ){
-//             xxx += ;
-//         }
-//         else{ 
-//             xxx += char;
-//         }
-//     }
-//     xxx += ;
-//     return xxx.toLowerCase();
-// }
-//`titleCase` =================
+//`crazyCase` ============================================================================================================
+function crazyCase(str){
+    let xxx = '';
+    let upper = false;
+    for(const char of str){
+        if(upper){
+        xxx += char.toUpperCase();
+        upper = false;
+    }else{
+        xxx += char.toLowerCase();
+        upper = true;
+    }
+}
+    return xxx;
+}
+console.log(crazyCase(greed));
+console.log();
+//`titleCase` ==============================================================================================================
+function titleCase(str){
+    let xxx = '';
+    let upCase = true;
+    for ( const char of str){
+        const isSpace = char === ' ';
+        if(upCase){
+            xxx += char.toUpperCase();
+            upCase = false;
+        }else{
+            xxx += char.toLowerCase();
+            upCase = false;
+        }
+        if(isSpace){
+            upCase = true;
+        }
+    }
+    return xxx;
+}
+console.log(titleCase('return of the king'));
+//`camelCase` =================================================================================================================
 
-//`camelCase` =================
+//`crazyCase2ReturnOfCrazyCase` ===============================================================================================
 
-//`crazyCase2ReturnOfCrazyCase` =================
+function crazyCase2ReturnOfCrazyCase(String){
+    let xxx = '';
+    let count = 0;
+
+    for (const char of String){
+        if (char !== ' '){
+            count++;
+        }
+        if(count % 2 === 0){
+            xxx += char.toUpperCase();
+        }else{
+            xxx += char.toLowerCase();
+        }
+    }
+    return xxx;
+}
+console.log(crazyCase2ReturnOfCrazyCase('return of the king'));
 
